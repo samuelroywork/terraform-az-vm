@@ -1,0 +1,17 @@
+# Copy this file to terraform.tfvars and adjust the values.
+
+prefix              = "tfazvm"
+location            = "southeastasia"
+resource_group_name = "rg-tfazvm"
+
+vm_size             = "Standard_D2s_v3"
+admin_username      = "azureuser"
+ssh_public_key_path = "~/.ssh/id_rsa.pub"
+
+# Restrict SSH to your own IP for better security, e.g. "203.0.113.5/32"
+allowed_ssh_source = "*"
+
+tags = {
+  environment = "dev"
+  managed_by  = "terraform"
+}
